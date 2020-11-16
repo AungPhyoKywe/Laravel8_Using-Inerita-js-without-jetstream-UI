@@ -85,7 +85,7 @@
                 }
             },
             save: function (data) {
-                this.$inertia.post('/', data)
+                this.$inertia.post('/post/', data)
                 this.reset();
                 this.closeModal();
                 this.editMode = false;
@@ -98,14 +98,14 @@
             update: function (data) {
                 if (!confirm('Sure')) return;
                 data._method = 'PUT';
-                this.$inertia.post('/' + data.id, data)
+                this.$inertia.post('/post/' + data.id, data)
                 this.reset();
                 this.closeModal();
             },
             deleteRow: function (data) {
                 if (!confirm('Sure')) return;
                 data._method = 'DELETE';
-                this.$inertia.post('/' + data.id, data)
+                this.$inertia.post('/post/' + data.id, data)
                 this.reset();
                 this.closeModal();
             }

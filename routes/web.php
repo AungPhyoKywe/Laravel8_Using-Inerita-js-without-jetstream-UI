@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', \App\Http\Controllers\WebController::class);
+Route::resource('/post', \App\Http\Controllers\WebController::class);
 
 Auth::routes();
 
